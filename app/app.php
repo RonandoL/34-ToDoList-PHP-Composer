@@ -1,7 +1,7 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/class.php";  <---- fix this
+    require_once __DIR__."/../src/tasks.php"; 
 
     session_start();                          // For global variable, saving in browser cache
     if (empty($_SESSION['list_of_tasks'])) {
