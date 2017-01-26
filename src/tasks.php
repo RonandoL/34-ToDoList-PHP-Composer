@@ -1,27 +1,27 @@
 <?php
     class Task
     {
-        private $task;
+        private $description;
 
-        function __construct($a_task)
+        function __construct($task_description)
         {
-            $this->task = $a_task;
+            $this->description = $task_description;
         }
 
-        // SETTER GETTER
-        function setTask($new_task)
+        // Setter Getter
+        function setDescription($new_description)
         {
-            $this->task = $new_task;
+            $this->description = $new_description;
         }
-        function getTask()
+        function getDescription()
         {
-            return $this->task;
+            return $this->description;
         }
 
         // Save Task to array using global variable _SESSION
         function save()
         {
-            array_push($_SESSION['list_of_tasks'], $this->task);
+            array_push($_SESSION['list_of_tasks'], $this);
         }
 
         // Display array of tasks with getAll() - remember it's a static function
